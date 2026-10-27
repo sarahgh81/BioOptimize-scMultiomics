@@ -1,0 +1,30 @@
+# BioOptimize scMultiomics default configuration
+
+scrna:
+  batch_key: sample
+  integration: harmony
+  resolution: 0.5
+  n_neighbors: 15
+  n_pcs: 30
+  min_genes: 200
+  max_mt_percent: 20
+
+scatac:
+  genome: hg38
+  peak_calling: true
+  tile_size: 500
+
+spatial:
+  n_neighs: 6
+  resolution: 0.4
+  library_id: null
+
+multiomics:
+  methods:
+    - harmony
+    - muon
+  joint_embedding: true
+
+advisor:
+  enabled: true
+  model: local
