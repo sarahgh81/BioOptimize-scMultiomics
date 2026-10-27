@@ -1,0 +1,23 @@
+name: biooptimize-sc
+channels:
+  - conda-forge
+  - bioconda
+dependencies:
+  - python=3.10
+  - scanpy
+  - anndata
+  - squidpy
+  - muon
+  - harmonypy
+  - scvi-tools
+  - leidenalg
+  - umap-learn
+  - pandas
+  - numpy
+  - matplotlib
+  - seaborn
+  - jupyterlab
+  - pyyaml
+  - pip
+  - pip:
+      - -e .
