@@ -1,6 +1,6 @@
 # Examples
 
-## Rheumatoid Arthritis Synovial scRNA-seq
+## 1. Rheumatoid Arthritis Synovial Tissue scRNA-seq
 
 **File**: `RA_synovium_scRNAseq.ipynb`
 
@@ -23,19 +23,48 @@ A complete, realistic analysis example using publicly available single-cell RNA-
 7. Marker gene discovery
 8. Comparison of synovial tissue vs peripheral blood immune landscapes
 
-### How to run
-1. Download the processed MTX files from BioStudies (see notebook for details).
-2. Organize them under `data/raw/RA_E-MTAB-14192/<sample_name>/`.
-3. Activate the environment: `conda activate biooptimize-sc`
-4. Launch Jupyter and open the notebook.
-
 ### Biological focus
 - Immune cell heterogeneity in RA synovium
 - Differences between tissue-resident and circulating immune cells
 - Myeloid / macrophage states relevant to RA pathogenesis
 
-This example is designed to mirror a real research project and can be extended with cell type annotation, trajectory analysis, or multi-omics integration.
+---
+
+## 2. Rheumatoid Arthritis Synovial Fluid: Pre- vs Post-Treatment
+
+**File**: `RA_synovial_fluid_treatment.ipynb`
+
+### Overview
+Analysis of treatment response in RA synovial fluid using paired pre- and post-treatment samples from patients receiving TNF-α or JAK inhibitors.
+
+### Dataset
+- **Accession**: GSE296117 (GEO)
+- **Paper**: He et al., *Scientific Data* (2025)
+- **Design**: Paired synovial fluid samples before and after 1 month of adalimumab or tofacitinib (+ MTX)
+- **Cells**: ~100,000 high-quality cells
+- **Source**: https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE296117
+- **Processed data**: Seurat RDS available as GEO supplementary file (~2.3 GB)
+
+### What the notebook demonstrates
+1. Loading processed data (RDS → AnnData)
+2. QC and preprocessing
+3. Patient-level Harmony integration
+4. Clustering and marker visualization
+5. Pre- vs post-treatment comparison
+6. Focus on pathogenic cell states (SPP1+ macrophages, CXCL13+ T cells)
+
+### Biological focus
+- Dynamic effects of TNF-α and JAK inhibitors on synovial fluid immune cells
+- Reduction of pathogenic macrophage and T cell states after treatment
+- Drug-specific transcriptional and communication changes
+
+### How to run
+1. Download `GSE296117_RA_geo.rds` from GEO supplementary files.
+2. Convert to AnnData (or use pre-converted h5ad) and place in `data/raw/GSE296117/`.
+3. Activate environment and open the notebook.
 
 ---
+
+Both examples are designed to mirror real research projects and can be extended with cell type annotation, trajectory analysis, ligand-receptor inference, or multi-omics integration.
 
 *Research use only.*
