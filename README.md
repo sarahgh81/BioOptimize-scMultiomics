@@ -17,6 +17,7 @@ This project demonstrates practical, production-oriented analysis of modern sing
 - Transparent, educational code structure
 - AI-assisted parameter guidance
 - Reproducible environments and documentation
+- **Real disease example**: Rheumatoid arthritis synovial scRNA-seq analysis
 
 Ideal for research portfolios, collaborations, and teaching advanced single-cell methods.
 
@@ -61,6 +62,16 @@ result = analyze_scrna(
 )
 ```
 
+## Real Experiment Example
+
+**Rheumatoid Arthritis (RA) Synovial Tissue Analysis**  
+See [examples/RA_synovium_scRNAseq.ipynb](examples/RA_synovium_scRNAseq.ipynb) for a complete, realistic project using public data (E-MTAB-14192):
+
+- Paired blood and synovial tissue from treatment-naive RA patients
+- Multi-sample loading, QC, Harmony integration
+- Clustering, marker genes, and tissue comparison
+- Focus on immune cell heterogeneity relevant to RA pathogenesis
+
 ## Project Structure
 
 ```
@@ -72,7 +83,7 @@ BioOptimize-scMultiomics/
 │   ├── multiomics.py     # Integration layer
 │   └── advisor.py        # AI recommendations
 ├── config/
-├── examples/
+├── examples/             # Includes RA analysis notebook
 ├── docs/
 ├── tests/
 ├── environment.yml
@@ -85,6 +96,7 @@ BioOptimize-scMultiomics/
 - [scATAC-seq Guide](docs/SCATAC.md)
 - [Spatial Analysis](docs/SPATIAL.md)
 - [Multi-omics Integration](docs/MULTIOMICS.md)
+- [Examples](examples/README.md)
 
 ## Citation
 
