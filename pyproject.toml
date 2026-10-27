@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "biooptimize-scmultiomics"
+version = "0.1.0"
+description = "Analysis framework for scRNA-seq, scATAC-seq, spatial transcriptomics, and multi-omics"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Sarah Ghasemi"}]
+license = {text = "MIT"}
+dependencies = [
+    "scanpy",
+    "anndata",
+    "squidpy",
+    "pandas",
+    "numpy",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+scvi = ["scvi-tools"]
+full = ["muon", "harmonypy"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["pipeline*"]
