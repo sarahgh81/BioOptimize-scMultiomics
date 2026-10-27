@@ -17,7 +17,7 @@ This project demonstrates practical, production-oriented analysis of modern sing
 - Transparent, educational code structure
 - AI-assisted parameter guidance
 - Reproducible environments and documentation
-- **Real disease example**: Rheumatoid arthritis synovial scRNA-seq analysis
+- **Real disease examples**: Two complete RA scRNA-seq analyses
 
 Ideal for research portfolios, collaborations, and teaching advanced single-cell methods.
 
@@ -62,15 +62,25 @@ result = analyze_scrna(
 )
 ```
 
-## Real Experiment Example
+## Real Experiment Examples
 
-**Rheumatoid Arthritis (RA) Synovial Tissue Analysis**  
-See [examples/RA_synovium_scRNAseq.ipynb](examples/RA_synovium_scRNAseq.ipynb) for a complete, realistic project using public data (E-MTAB-14192):
+### 1. RA Synovial Tissue (Treatment-Naive)
+See [examples/RA_synovium_scRNAseq.ipynb](examples/RA_synovium_scRNAseq.ipynb)  
+**Dataset**: E-MTAB-14192 — Paired blood and synovial tissue from 3 treatment-naive RA patients.
 
-- Paired blood and synovial tissue from treatment-naive RA patients
 - Multi-sample loading, QC, Harmony integration
-- Clustering, marker genes, and tissue comparison
-- Focus on immune cell heterogeneity relevant to RA pathogenesis
+- Synovium vs blood immune cell comparison
+- Focus on tissue-resident immune heterogeneity
+
+### 2. RA Synovial Fluid: Pre- vs Post-Treatment
+See [examples/RA_synovial_fluid_treatment.ipynb](examples/RA_synovial_fluid_treatment.ipynb)  
+**Dataset**: GSE296117 — Paired synovial fluid before and after adalimumab or tofacitinib.
+
+- Treatment response analysis
+- Pathogenic cell state dynamics (SPP1+ macrophages, CXCL13+ T cells)
+- Patient-level batch correction
+
+Full details in [examples/README.md](examples/README.md).
 
 ## Project Structure
 
@@ -83,7 +93,7 @@ BioOptimize-scMultiomics/
 │   ├── multiomics.py     # Integration layer
 │   └── advisor.py        # AI recommendations
 ├── config/
-├── examples/             # Includes RA analysis notebook
+├── examples/             # Two complete RA analysis notebooks
 ├── docs/
 ├── tests/
 ├── environment.yml
